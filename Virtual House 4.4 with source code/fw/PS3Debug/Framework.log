@@ -1,0 +1,56 @@
+﻿Build started 02/02/2011 9:10:48 PM.
+     1>Project "C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\Framework.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "PS3Debug\Framework.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude/psgl /Iinclude /I\ppu\include\sn /I\target\ppu\include /Zi /nologo /W1 /WX- /O2 /Oy- /D SN_TARGET_PS3 /D _DEBUG /D __GCC__ /D PSGL /D __CELLOS_LV2__ /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"PS3Debug\\" /Fd"PS3Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\FWApplication.cpp src\FWCamera.cpp src\FWDebugConsole.cpp src\FWDebugFont.cpp src\FWDebugFontRenderer.cpp src\FWDisplayInfo.cpp src\FWInput.cpp src\FWNullApplication.cpp src\FWNullDebugFontRenderer.cpp src\FWNullWindow.cpp src\FWWindow.cpp src\cell\FWCellGLWindow.cpp src\cell\FWCellInput.cpp src\cell\FWCellMain.cpp src\cell\FWCellSystemCallback.cpp src\cell\FWCellTime.cpp src\psgl\FWGLApplication.cpp src\psgl\FWGLCamApplication.cpp src\psgl\FWGLCamControlApplication.cpp src\psgl\FWGLDebugFontRenderer.cpp src\psgl\FWGLGrid.cpp -g
+          
+     1>cl : Command line warning D9002: ignoring unknown option '-g'
+         FWApplication.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWCamera.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWMath.h(26): fatal error C1083: Cannot open include file: 'scalar/cpp/vectormath_aos.h': No such file or directory
+         FWDebugConsole.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWDebugFont.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWDebugFontRenderer.cpp
+         FWDisplayInfo.cpp
+     1>C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWInput.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWNullApplication.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWNullDebugFontRenderer.cpp
+         FWNullWindow.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         FWWindow.cpp
+     1>src\FWWindow.cpp(23): fatal error C1083: Cannot open include file: 'sys/paths.h': No such file or directory
+         FWCellGLWindow.cpp
+     1>src\cell\FWCellGLWindow.cpp(6): fatal error C1083: Cannot open include file: 'sys/return_code.h': No such file or directory
+         FWCellInput.cpp
+     1>src\cell\FWCellInput.cpp(6): fatal error C1083: Cannot open include file: 'cell/keyboard.h': No such file or directory
+         FWCellMain.cpp
+     1>src\cell\FWCellMain.cpp(7): fatal error C1083: Cannot open include file: 'sys/process.h': No such file or directory
+         FWCellSystemCallback.cpp
+     1>C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\include\cell/FWCellSystemCallback.h(9): fatal error C1083: Cannot open include file: 'sysutil/sysutil_common.h': No such file or directory
+         FWCellTime.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\cell/FWCellTime.h(25): fatal error C1083: Cannot open include file: 'sys/time_util.h': No such file or directory
+         FWGLApplication.cpp
+     1>C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\include\FWMath.h(26): fatal error C1083: Cannot open include file: 'scalar/cpp/vectormath_aos.h': No such file or directory
+         FWGLCamApplication.cpp
+     1>C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\include\FWMath.h(26): fatal error C1083: Cannot open include file: 'scalar/cpp/vectormath_aos.h': No such file or directory
+         FWGLCamControlApplication.cpp
+     1>C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\include\FWMath.h(26): fatal error C1083: Cannot open include file: 'scalar/cpp/vectormath_aos.h': No such file or directory
+         FWGLDebugFontRenderer.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\psgl\FWPSGLInclude.h(24): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         Generating Code...
+         Compiling...
+         FWGLGrid.cpp
+     1>c:\users\alejandro\desktop\ps3_sdk_v1.92\samples\fw\include\FWDisplayInfo.h(10): fatal error C1083: Cannot open include file: 'PSGL/psgl.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "C:\Users\Alejandro\Desktop\PS3_SDK_v1.92\samples\fw\Framework.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.99

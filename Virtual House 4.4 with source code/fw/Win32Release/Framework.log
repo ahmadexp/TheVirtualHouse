@@ -1,0 +1,56 @@
+﻿Build started 16/02/2011 10:39:24 AM.
+     1>Project "C:\Users\Alejandro\Desktop\Virtual World 2\fw\Framework.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Win32Release\Framework.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Ilib\ /Ilib\include /Iinclude/psgl /Iinclude /I\target\common\include\vectormath\ /Zi /nologo /W1 /WX- /O2 /Oy- /D _WIN32 /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32Release\\" /Fd"Win32Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\FWApplication.cpp src\FWDebugConsole.cpp src\FWDebugFont.cpp src\FWDisplayInfo.cpp src\FWInput.cpp src\FWNullApplication.cpp src\FWNullWindow.cpp src\FWWindow.cpp src\psgl\FWGLApplication.cpp src\psgl\FWGLCamApplication.cpp src\psgl\FWGLCamControlApplication.cpp src\psgl\FWGLExtensions.cpp src\psgl\FWGLGrid.cpp src\win32\FWWin32GLWindow.cpp src\win32\FWWin32Input.cpp src\win32\FWWin32Main.cpp
+         FWApplication.cpp
+         FWDebugConsole.cpp
+         FWDebugFont.cpp
+         FWDisplayInfo.cpp
+         FWInput.cpp
+         FWNullApplication.cpp
+         FWNullWindow.cpp
+         FWWindow.cpp
+         FWGLApplication.cpp
+         FWGLCamApplication.cpp
+         FWGLCamControlApplication.cpp
+         FWGLExtensions.cpp
+         FWGLGrid.cpp
+         FWWin32GLWindow.cpp
+         FWWin32Input.cpp
+         FWWin32Main.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(C:\Users\Alejandro\Desktop\Virtual World 2\fw\Win32Release\Framework.lib) does not match the Library's OutputFile property value (C:\Users\Alejandro\Desktop\Virtual World 2\fw\Framework.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"Framework.lib" /NOLOGO /NODEFAULTLIB Win32Release\FWApplication.obj
+         Win32Release\FWCamera.obj
+         Win32Release\FWDebugConsole.obj
+         Win32Release\FWDebugFont.obj
+         Win32Release\FWDebugFontRenderer.obj
+         Win32Release\FWDisplayInfo.obj
+         Win32Release\FWInput.obj
+         Win32Release\FWNullApplication.obj
+         Win32Release\FWNullDebugFontRenderer.obj
+         Win32Release\FWNullWindow.obj
+         Win32Release\FWWindow.obj
+         Win32Release\FWWin32GLExtensions.obj
+         Win32Release\FWWin32GLWindow.obj
+         Win32Release\FWWin32Input.obj
+         Win32Release\FWWin32Main.obj
+         Win32Release\FWWin32Time.obj
+         Win32Release\FWGLApplication.obj
+         Win32Release\FWGLCamApplication.obj
+         Win32Release\FWGLCamControlApplication.obj
+         Win32Release\FWGLDebugFontRenderer.obj
+         Win32Release\FWGLExtensions.obj
+         Win32Release\FWGLGrid.obj
+         Framework.vcxproj -> C:\Users\Alejandro\Desktop\Virtual World 2\fw\Win32Release\Framework.lib
+       FinalizeBuildStatus:
+         Deleting file "Win32Release\Framework.unsuccessfulbuild".
+         Touching "Win32Release\Framework.lastbuildstate".
+     1>Done Building Project "C:\Users\Alejandro\Desktop\Virtual World 2\fw\Framework.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.62

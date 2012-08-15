@@ -1,0 +1,65 @@
+﻿Build started 03/02/2011 1:39:29 PM.
+     1>Project "C:\Users\Alejandro\Desktop\The Untitled Project v0.2 source\fw\Framework.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Win32Debug\Framework.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Ilib\ /Ilib\include /Iinclude\psgl /Iinclude /I\target\common\include\vectormath\ /ZI /nologo /W1 /WX- /Od /Oy- /D _WIN32 /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32Debug\\" /Fd"Win32Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\FWApplication.cpp src\FWCamera.cpp src\FWDebugConsole.cpp src\FWDebugFont.cpp src\FWDebugFontRenderer.cpp src\FWDisplayInfo.cpp src\FWInput.cpp src\FWNullApplication.cpp src\FWNullDebugFontRenderer.cpp src\FWNullWindow.cpp src\FWWindow.cpp src\win32\FWWin32GLExtensions.cpp src\win32\FWWin32GLWindow.cpp src\win32\FWWin32Input.cpp src\win32\FWWin32Main.cpp src\win32\FWWin32Time.cpp src\psgl\FWGLApplication.cpp src\psgl\FWGLCamApplication.cpp src\psgl\FWGLCamControlApplication.cpp src\psgl\FWGLDebugFontRenderer.cpp src\psgl\FWGLExtensions.cpp src\psgl\FWGLGrid.cpp
+         FWApplication.cpp
+         FWCamera.cpp
+         FWDebugConsole.cpp
+         FWDebugFont.cpp
+         FWDebugFontRenderer.cpp
+         FWDisplayInfo.cpp
+         FWInput.cpp
+         FWNullApplication.cpp
+         FWNullDebugFontRenderer.cpp
+         FWNullWindow.cpp
+         FWWindow.cpp
+         FWWin32GLExtensions.cpp
+         FWWin32GLWindow.cpp
+         FWWin32Input.cpp
+         FWWin32Main.cpp
+         FWWin32Time.cpp
+         FWGLApplication.cpp
+         FWGLCamApplication.cpp
+         FWGLCamControlApplication.cpp
+         FWGLDebugFontRenderer.cpp
+         Generating Code...
+         Compiling...
+         FWGLExtensions.cpp
+         FWGLGrid.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(C:\Users\Alejandro\Desktop\The Untitled Project v0.2 source\fw\Win32Debug\Framework.lib) does not match the Library's OutputFile property value (C:\Users\Alejandro\Desktop\The Untitled Project v0.2 source\fw\FrameworkD.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(Framework) does not match the Library's OutputFile property value (FrameworkD). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"FrameworkD.lib" /NOLOGO Win32Debug\FWApplication.obj
+         Win32Debug\FWCamera.obj
+         Win32Debug\FWDebugConsole.obj
+         Win32Debug\FWDebugFont.obj
+         Win32Debug\FWDebugFontRenderer.obj
+         Win32Debug\FWDisplayInfo.obj
+         Win32Debug\FWInput.obj
+         Win32Debug\FWNullApplication.obj
+         Win32Debug\FWNullDebugFontRenderer.obj
+         Win32Debug\FWNullWindow.obj
+         Win32Debug\FWWindow.obj
+         Win32Debug\FWWin32GLExtensions.obj
+         Win32Debug\FWWin32GLWindow.obj
+         Win32Debug\FWWin32Input.obj
+         Win32Debug\FWWin32Main.obj
+         Win32Debug\FWWin32Time.obj
+         Win32Debug\FWGLApplication.obj
+         Win32Debug\FWGLCamApplication.obj
+         Win32Debug\FWGLCamControlApplication.obj
+         Win32Debug\FWGLDebugFontRenderer.obj
+         Win32Debug\FWGLExtensions.obj
+         Win32Debug\FWGLGrid.obj
+         Framework.vcxproj -> C:\Users\Alejandro\Desktop\The Untitled Project v0.2 source\fw\Win32Debug\Framework.lib
+       FinalizeBuildStatus:
+         Deleting file "Win32Debug\Framework.unsuccessfulbuild".
+         Touching "Win32Debug\Framework.lastbuildstate".
+     1>Done Building Project "C:\Users\Alejandro\Desktop\The Untitled Project v0.2 source\fw\Framework.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.23
