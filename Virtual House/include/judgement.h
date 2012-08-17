@@ -125,6 +125,7 @@ char get_letter(int judge_num){
         return 'I';
         break;
     }
+	return 'Z';
 }
 void TestApp::judgment(){
 	

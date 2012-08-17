@@ -3,7 +3,7 @@ void genworldgrid(){
 	//windows locations
 	const int clue_win_array[9][9]={
 			{000,00,0,00,00,0,00,0,0},
-			{'M',18,3,21,18,3,28,27,25},			//1
+			{'M',18,3,21,18,3,28,27,25},				//1
 			{'D',21,4,31,28,4,31,27,31},				//2
 			{'J',28,4,18,21,4,18,28,33},				//3
 			{'S',31,3,28,31,3,21,26,28},				//4
@@ -535,29 +535,28 @@ void genworldgrid(){
 	}
 	
 	//fence
-	if(showsky){
-		for(int x=3;x<=worldgridsizex-4;x++){
-			worldgrid[x][2][2][0]=97;
-			worldgrid[x][2][2][1]=1;
-			worldgrid[x][2][worldgridsizez-3][0]=97;
-			worldgrid[x][2][worldgridsizez-3][1]=3;
-		}
-		for(int z=3;z<=worldgridsizez-4;z++){
-			worldgrid[2][2][z][0]=97;
-			worldgrid[2][2][z][1]=2;
-			worldgrid[worldgridsizex-3][2][z][0]=97;
-			worldgrid[worldgridsizex-3][2][z][1]=0;
-		}
+	for(int x=3;x<=worldgridsizex-4;x++){
+		worldgrid[x][2][2][0]=97;
+		worldgrid[x][2][2][1]=1;
+		worldgrid[x][2][worldgridsizez-3][0]=97;
+		worldgrid[x][2][worldgridsizez-3][1]=3;
 	}
+	for(int z=3;z<=worldgridsizez-4;z++){
+		worldgrid[2][2][z][0]=97;
+		worldgrid[2][2][z][1]=2;
+		worldgrid[worldgridsizex-3][2][z][0]=97;
+		worldgrid[worldgridsizex-3][2][z][1]=0;
+	}
+	
 	
 	if(allocentric){
 		//Allocentric part
 
-		//R
-		a_win_pos[0]=clue_win_array[7][4];
-		a_win_pos[1]=clue_win_array[7][5];
-		a_win_pos[2]=clue_win_array[7][6];
-		//R
+		//G
+		a_win_pos[0]=clue_win_array[6][1];
+		a_win_pos[1]=clue_win_array[6][2];
+		a_win_pos[2]=clue_win_array[6][3];
+		//G
 
 		//F
 		b_win_pos[0]=clue_win_array[2][4];

@@ -1,4 +1,4 @@
-const float version = 4.4;
+const float version = 4.7;
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -62,9 +62,11 @@ int stairtype=6;   //1=stairs at 180degrees, 2=stairs at 90 degrees, 3=ramp at 1
 
 const char mediadir[] = "Media/";
 char* logfilename="default.txt";
+char* total_logfilename="total.txt";
 char logfilename_2[100];
 FILE * pFile;
 FILE * pFile_2;
+FILE * pFile_3;
 
 
 #include "generic.h"
@@ -111,9 +113,9 @@ bool TestApp::onInit(int argc, char **ppArgv){
 		if(!strcmp(ppArgv[i],"/JOYTRANSVEL")) JoyTransVel*=atof(ppArgv[i+1]);
 		if(!strcmp(ppArgv[i],"/LANGUAGE")) lang*=atoi(ppArgv[i+1]);
 		if(!strcmp(ppArgv[i],"/KIDMODE")) kidmode=1;
-		if(!strcmp(ppArgv[i],"/SHOWSKY")) showsky=1;
 		if(!strcmp(ppArgv[i],"/ANIMSOUND")) animal_background_sound=1;
 		if(!strcmp(ppArgv[i],"/PERPSTAIR")) stairtype=atoi(ppArgv[i+1]);
+		if(!strcmp(ppArgv[i],"/LOGTOTAL")) total_logfilename=ppArgv[i+1];
     }
 
 	ShowCursor(0);  // added to hide the mouse cursor
@@ -131,8 +133,13 @@ bool TestApp::onInit(int argc, char **ppArgv){
 	pFile = fopen (logfilename,"w");
 	sprintf(logfilename_2,"%s%s",logfilename,"_Int.txt");
 	pFile_2 = fopen ((char *)logfilename_2,"w");
-	srand(time(NULL));
 	
+	if(trial==1)
+		pFile_3 = fopen ((char *)total_logfilename,"w");		//open a new total file
+	else if(trial>1)
+		pFile_3 = fopen ((char *)total_logfilename,"a");		//append to the existing total file
+	
+	srand(time(NULL));
 	if(allocentric)
 		targetwin=(int)(trial-1)%3;
 	else
@@ -190,18 +197,14 @@ bool TestApp::onUpdate(){
 	}else if(gamestate==1){//loading screen for media
 		setupbuttons();
 		setupmedia();
-		gamestate=2;
-	}else if(gamestate==2){//main menu
+		skybox = new SKYBOX();
+		skybox->Initialize();
 		gamestate=3;
 	}else if(gamestate==3){//setup the game world
 		setupgame();
 		gamestate=4;
 	}else if(gamestate==4){//play
 		play(gamespeed);				
-	}else if(gamestate==5){//pause menu
-	}else if(gamestate==6){//save screenshot
-	}else if(gamestate==7){//save game
-	}else if(gamestate==8){//load game
 	}
 
 	if(!waitforscreenrefresh){
@@ -274,7 +277,12 @@ void TestApp::onSize(const FWDisplayInfo &dispInfo){
 //-----------------------------------------------------------------------------
 void TestApp::onShutdown(){
 	unbindcontrols();
+	skybox->Finalize();
+	
+	glDisable(GL_LIGHTING);
+	glDisable(GL_LIGHT0);
 	fclose (pFile);
 	fprintf(pFile_2,"_______________________________________________________________________________________________________________________\n");
 	fclose (pFile_2);
+	fclose (pFile_3);
 }

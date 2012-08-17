@@ -22,7 +22,6 @@ bool usejoystick=0;
 bool calibjoy=1;
 bool sound=1;
 bool showinfo=1;
-bool showsky=0;
 bool testmode=0;
 bool showplayer=0;
 bool freecamera=0;
@@ -453,5 +452,37 @@ void TestApp::setupgame(){
 
 	//generate the mini map
 	minimaptexture=genminimap();
+
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+	glFrontFace(GL_CCW);
+	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+	glAlphaFunc(GL_GREATER,0.0f);
+
+	//turn on fog
+	GLfloat fogColor[4]= {0.3, 0.46, 0.65, 0.5};             //fog color
+	glFogi(GL_FOG_MODE,GL_LINEAR);
+	glFogfv(GL_FOG_COLOR,fogColor);
+	glFogf(GL_FOG_DENSITY,0.25f);
+	glHint(GL_FOG_HINT,GL_DONT_CARE);
+	glFogf(GL_FOG_START,0.1f);
+	glFogf(GL_FOG_END,worldtilesize*(worldtileviewrange+20));
+	glEnable(GL_FOG);
+	
+	//prep for drawing
+	glEnable(GL_LIGHTING);
+
+	glEnable(GL_LIGHT0);
+	GLfloat light_position0[] = {camxpos,camypos,camzpos,1.0};
+	//GLfloat light_position0[] = {30,10,30,1.0};
+	GLfloat light_ambient0[] = {1.0,1.0,1.0,1.0};
+	GLfloat light_diffuse0[] = {1.0,1.0,1.0,1.0};
+	GLfloat light_specular0[] = {1.0,1.0,1.0,1.0};
+	glLightfv(GL_LIGHT0,GL_POSITION,light_position0);
+	glLightfv(GL_LIGHT0,GL_AMBIENT,light_ambient0);
+	glLightfv(GL_LIGHT0,GL_DIFFUSE,light_diffuse0);
+	glLightfv(GL_LIGHT0,GL_SPECULAR,light_specular0);
+
+	
 
 }
